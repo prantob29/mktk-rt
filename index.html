@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Real-Time Bandwidth Monitor</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>Real-Time Bandwidth Monitor</h1>
+	<div id="bandwidth-display">
+		<p>Loading...</p>
+	</div>
+	<script>
+		$(document).ready(function() {
+			setInterval(function() {
+				$('#bandwidth-display').load('get-bandwidth.php');
+			}, 1000); // Refresh every second
+		});
+	</script>
+</body>
+</html>
